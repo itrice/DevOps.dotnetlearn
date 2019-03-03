@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  dotnetmvcdemo:
+    image: dotnetmvcdemo
+    build:
+      context: .
+      dockerfile: dotnetMVCDemo\Dockerfile
