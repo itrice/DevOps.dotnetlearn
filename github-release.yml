@@ -2,8 +2,8 @@
 # Create, edit, or delete a GitHub release.
 - task: GitHubRelease@0
   inputs:
-    gitHubConnection: 7face63b48867614c4b35fae3c9ffef7a2702762
-    repositoryName: DevOps.dotnetlearn
+    gitHubConnection: 479f80c4233edfc4d0c6f68dcb9b310e6869b5be
+    repositoryName: itrice/DevOps.dotnetlearn
     action: 'create' # Options: create, edit, delete
     target: '$(Build.SourceVersion)' # Required when action == Create || Action == Edit
     #tagSource: 'auto' # Required when action == Create# Options: auto, manual
