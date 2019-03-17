@@ -14,10 +14,10 @@ steps:
     dotnet publish --configuration $(buildConfiguration) --output $BUILD_ARTIFACTSTAGINGDIRECTORY
   failOnStderr: true
 
-- task: PublishTestResults@2
+#- task: PublishTestResults@2
   condition: succeededOrFailed()
-  inputs:
-    testRunner: VSTest
-    testResultsFiles: '**/*.trx'
+  #inputs:
+   # testRunner: VSTest
+   #testResultsFiles: '**/*.trx'
 
-- task: PublishBuildArtifacts@1
+#- task: PublishBuildArtifacts@1
