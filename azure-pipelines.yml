@@ -5,19 +5,14 @@ pool:
   vmImage: 'Ubuntu 16.04'
   
 variables:
+  solution: '**/*.sln'
   buildConfiguration: 'Release'
 
 steps:
-- script: |
-    dotnet build --configuration $(buildConfiguration)
-    dotnet test dotnetcore-tests --configuration $(buildConfiguration) --logger trx
-    dotnet publish --configuration $(buildConfiguration) --output $BUILD_ARTIFACTSTAGINGDIRECTORY
-  failOnStderr: true
-
-#- task: PublishTestResults@2
+- task: PublishTestResults@2
   condition: succeededOrFailed()
   #inputs:
    # testRunner: VSTest
    #testResultsFiles: '**/*.trx'
 
-#- task: PublishBuildArtifacts@1
+- task: PublishBuildArtifacts@1
